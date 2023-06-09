@@ -1,0 +1,34 @@
+server:
+  port: 8085
+  servlet:
+    context-path: /
+
+spring:
+  elasticsearch:
+    rest:
+      # 设置ES的地址
+      uris: http://49.233.48.28:9200
+
+load:
+  json:
+    path: D:\youxi\upFiles
+#    path: /python/txt
+
+xxl:
+  job:
+    admin:
+      addresses: http://127.0.0.1:8092/xxl-job-admin
+    accessToken: default_token
+    executor:
+      appname: zpa-job
+#      ip: 36.45.241.193
+      port: 9997
+      # 日志地址
+      logpath: /data/applogs/xxl-job/jobhandler
+      # 日志保存时间
+      logretentiondays: 30
+
+http:
+  file:
+    url: http://localhost:8082/jeecg-boot/media/mediaModelFile/list
+
